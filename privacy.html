@@ -36,4 +36,13 @@
         </div>
     </div>
     <footer class="footer"><div class="footer-grid"><div class="footer-col"><h4>ShopDeal India</h4><p>India's best deal aggregator</p></div><div class="footer-col"><h4>Quick Links</h4><a href="/about.html">About Us</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div><div class="footer-col"><h4>Contact</h4><p>📞 9773747761</p></div></div><div class="copyright"><p>© 2024 ShopDeal India | Powered by Cuelinks</p></div></footer>
-    <div class="whatsapp-float" onclick="startWhatsApp()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.032 0C5.384 0 0 5.384 0 12.032c0 2.112.56 4.184 1.632 6.008L0 24l6.08-1.584A12.02 12.02 0 0 0 12.032 24C18.68 24 24 18.616 24 11.968S18.68 0 12.032 0zM17.96 14.52c-.264-.136-1.568-.768-1.808-.856-.24-.088-.416-.136-.592.136-.176.272-.68.856-.832 1.032-.152.176-.304.2-.568.064-.264-.136-1.112-.408-2.12-1.304-.784-.696-1.312-1.552-1.464-1.816-.152-.264-.016-.408.112-.544.112-.12.264-.312.392-.472.136-.16.184-.272.272-.456.088-.184.048-.344-.024-.48-.072-.136-.592-1.424-.816-1.952-.216-.504-.432-.432-.592-.44h-.504a.96.96 0 0 0-.688.32c-.232.264-.88.856-.88 2.088s.904 2.424 1.032 2.592c.128.168 1.784 2.72 4.32 3.816.608.264 1.08.424 1.448.544.608.192 
+    <div class="whatsapp-float" onclick="startWhatsApp()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.032 0C5.384 0 0 5.384 0 12.032c0 2.112.56 4.184 1.632 6.008L0 24l6.08-1.584A12.02 12.02 0 0 0 12.032 24C18.68 24 24 18.616 24 11.968S18.68 0 12.032 0zM17.96 14.52c-.264-.136-1.568-.768-1.808-.856-.24-.088-.416-.136-.592.136-.176.272-.68.856-.832 1.032-.152.176-.304.2-.568.064-.264-.136-1.112-.408-2.12-1.304-.784-.696-1.312-1.552-1.464-1.816-.152-.264-.016-.408.112-.544.112-.12.264-.312.392-.472.136-.16.184-.272.272-.456.088-.184.048-.344-.024-.48-.072-.136-.592-1.424-.816-1.952-.216-.504-.432-.432-.592-.44h-.504a.96.96 0 0 0-.688.32c-.232.264-.88.856-.88 2.088s.904 2.424 1.032 2.592c.128.168 1.784 2.72 4.32 3.816.608.264 1.08.424 1.448.544.608.192 1.16.16 1.6.096.488-.072 1.504-.608 1.712-1.2.208-.592.208-1.104.144-1.208-.064-.104-.232-.168-.496-.304z"/></svg></div>
+    <script>
+        let cart = localStorage.getItem('shop_cart') ? parseInt(localStorage.getItem('shop_cart')) : 0;
+        document.getElementById('cartCount').innerText = cart;
+        function showCart() { alert(`🛒 Cart: ${cart} items`); }
+        function startWhatsApp() { window.open('https://wa.me/919773747761', '_blank'); }
+        function searchProducts() { window.location.href = '/'; }
+    </script>
+</body>
+</html>
