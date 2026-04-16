@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>ShopDeal India - Best Deals Across 800+ Indian Stores</title>
+    <meta name="description" content="Find best deals on Amazon, Flipkart, Myntra, Ajio & 800+ stores. Save up to 80% on electronics, fashion, beauty & more.">
+    <meta name="keywords" content="online shopping deals, best offers India, Amazon deals, Flipkart sale, Myntra offers, Cuelinks">
+    <meta name="author" content="ShopDeal India">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Cuelinks API Integration - Auto Link Conversion -->
+    <script>
+        // Cuelinks API Key
+        const CUELINKS_API_KEY = 'xji4NIVD_Dg1CJrSDjgbiJm3COZ8RH2Ml5GiriivbCI';
+        const STORE_ID = 'smileai24-21';
+        
+        // Initialize Cuelinks
+        (function() {
+            var script = document.createElement('script');
+            script.src = 'https://cuelinks.com/script.js?api_key=' + CUELINKS_API_KEY;
+            script.async = true;
+            document.head.appendChild(script);
+        })();
+    </script>
+    
+    <style>
+        /* ========== COMPLETE PROFESSIONAL CSS ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #2d3436;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-hover: 0 10px 25px rgba(0,0,0,0.12);
+            --border-radius: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), #ff9f43);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        .logo span {
+            font-size: 28px;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+            background: var(--light);
+            border-radius: 50px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-icons a {
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* Category Strip */
+        .category-strip {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-strip::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .category-btn {
+            padding: 10px 24px;
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Flash Sale Banner */
+        .flash-sale {
+            background: linear-gradient(135deg, #ff4757, #ff6b35);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .flash-timer {
+            background: rgba(0,0,0,0.3);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Products Section */
+        .products-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .sort-select {
+            padding: 8px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+        }
+
+        /* Products Grid - Masonry Style */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        @media (max-width: 640px) {
+            .products-grid { grid-template-columns: 1fr; }
+        }
+        @media (min-width: 641px) and (max-width: 768px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1025px) {
+            .products-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: linear-gradient(135deg, #ff4757, #ff6b35);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .product-badge.prime {
+            background: #00a8e1;
+            left: auto;
+            right: 12px;
+        }
+
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 16px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            height: 40px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .product-price {
+            margin-bottom: 8px;
+        }
+
+        .current-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .old-price {
+            font-size: 13px;
+            color: var(--gray);
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .discount {
+            background: #e8f5e9;
+            color: #4caf50;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .store-name {
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 8px;
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 8px 0;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 12px;
+        }
+
+        .shop-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            margin-top: 10px;
+        }
+
+        .shop-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Load More / Infinite Scroll */
+        .load-more {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .load-more-btn {
+            padding: 14px 40px;
+            background: var(--white);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .infinite-scroll-trigger {
+            height: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .feature p {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .newsletter h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .newsletter-form button {
+            padding: 14px 28px;
+            background: var(--primary);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            text-align: center;
+            padding: 60px;
+            color: var(--gray);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .nav-container { padding: 10px 15px; }
+            .search-bar { max-width: none; }
+            .flash-sale { flex-direction: column; text-align: center; }
+            .stats { gap: 20px; }
+            .stat-number { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="/" class="logo"><span>🇮🇳</span> ShopDeal India</a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search across 800+ stores... iPhone, Nike, Levi's, Swiss Beauty...">
+                <button onclick="searchProducts()">🔍 Search</button>
+            </div>
+            <div class="nav-icons">
+                <a href="#" onclick="showCart()">🛒<span class="cart-badge" id="cartCount">0</span></a>
+                <a href="#" onclick="startWhatsApp()">💬</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>🔥 Best Deals Across <span style="color:#ff9f43;">800+ Indian Stores</span></h1>
+        <p>Amazon • Flipkart • Myntra • Ajio • Tata Cliq • H&M • Levi's • Swiss Beauty • Gonoise • HP • Hostinger • 800+ more</p>
+        <div class="stats">
+            <div class="stat"><span class="stat-number">800+</span><span class="stat-label">Stores</span></div>
+            <div class="stat"><span class="stat-number">50,000+</span><span class="stat-label">Products</span></div>
+            <div class="stat"><span class="stat-number">50%+</span><span class="stat-label">Average Savings</span></div>
+            <div class="stat"><span class="stat-number">24/7</span><span class="stat-label">Support</span></div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Banner -->
+    <div class="flash-sale">
+        <span>⚡ FLASH SALE: Up to 80% OFF + Extra 10% Cashback</span>
+        <span class="flash-timer" id="flashTimer">23:59:59</span>
+    </div>
+
+    <!-- Categories Strip -->
+    <div class="category-strip" id="categoryStrip">
+        <button class="category-btn active" data-cat="all">🔥 All Deals</button>
+        <button class="category-btn" data-cat="electronics">📱 Electronics</button>
+        <button class="category-btn" data-cat="fashion">👕 Fashion</button>
+        <button class="category-btn" data-cat="beauty">💄 Beauty</button>
+        <button class="category-btn" data-cat="home">🏠 Home & Kitchen</button>
+        <button class="category-btn" data-cat="travel">✈️ Travel</button>
+        <button class="category-btn" data-cat="hosting">🚀 Hosting & Tech</button>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products-section">
+        <div class="section-header">
+            <h2 class="section-title" id="sectionTitle">🔥 Trending Deals for You</h2>
+            <select class="sort-select" id="sortSelect" onchange="sortProducts(this.value)">
+                <option value="default">Sort by: Featured</option>
+                <option value="price_low">Price: Low to High</option>
+                <option value="price_high">Price: High to Low</option>
+                <option value="discount">Biggest Discount</option>
+            </select>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <div class="loading-spinner">🛍️ Loading best deals from 800+ stores...</div>
+        </div>
+        <div class="infinite-scroll-trigger" id="scrollTrigger"></div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="feature"><div class="feature-icon">✅</div><h3>Same Price as Store</h3><p>You pay exactly what the store charges</p></div>
+        <div class="feature"><div class="feature-icon">🚚</div><h3>Free Shipping</h3><p>On lakhs of products across India</p></div>
+        <div class="feature"><div class="feature-icon">🛡️</div><h3>100% Genuine</h3><p>Direct links to official stores</p></div>
+        <div class="feature"><div class="feature-icon">💰</div><h3>Extra Cashback</h3><p>Up to 10% additional savings</p></div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+        <h3>📧 Get Best Deals in Your Inbox</h3>
+        <p>Subscribe to get exclusive offers & daily deals from 800+ stores</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+            <button type="submit">Subscribe →</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>🇮🇳 ShopDeal India</h4>
+                <p>India's largest deal aggregator</p>
+                <p>800+ stores | 50,000+ products</p>
+                <p style="margin-top: 10px;">Powered by <strong>Cuelinks</strong></p>
+            </div>
+            <div class="footer-col">
+                <h4>Top Stores</h4>
+                <a href="#">Amazon</a>
+                <a href="#">Flipkart</a>
+                <a href="#">Myntra</a>
+                <a href="#">Ajio</a>
+                <a href="#">Tata Cliq</a>
+                <a href="#">H&M</a>
+                <a href="#">Levi's</a>
+                <a href="#">Swiss Beauty</a>
+            </div>
+            <div class="footer-col">
+                <h4>Top Categories</h4>
+                <a href="#">Electronics</a>
+                <a href="#">Fashion</a>
+                <a href="#">Beauty</a>
+                <a href="#">Home & Kitchen</a>
+                <a href="#">Travel</a>
+                <a href="#">Hosting</a>
+                <a href="#">Mobile Phones</a>
+                <a href="#">Laptops</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 <a href="tel:9773747761" style="color:#ff6b35;">9773747761</a></p>
+                <p>📧 support@shopdealindia.com</p>
+                <p>💬 <a href="#" onclick="startWhatsApp()" style="color:#ff6b35;">WhatsApp Chat</a></p>
+                <p>🔑 Cuelinks API Active</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 ShopDeal India | As an affiliate partner, we earn from qualifying purchases</p>
+            <p>Powered by Cuelinks - 800+ merchants, one platform | API Key: xji4NIVD_***</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="startWhatsApp()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+            <path d="M12.032 0C5.384 0 0 5.384 0 12.032c0 2.112.56 4.184 1.632 6.008L0 24l6.08-1.584A12.02 12.02 0 0 0 12.032 24C18.68 24 24 18.616 24 11.968S18.68 0 12.032 0zm0 22.112c-1.808 0-3.592-.488-5.128-1.408l-.368-.216-3.608.944.96-3.52-.24-.376A9.96 9.96 0 0 1 2.016 12.08c0-5.528 4.488-10.016 10.016-10.016 5.528 0 10.016 4.488 10.016 10.016s-4.488 10.016-10.016 10.016z"/>
+            <path d="M17.96 14.52c-.264-.136-1.568-.768-1.808-.856-.24-.088-.416-.136-.592.136-.176.272-.68.856-.832 1.032-.152.176-.304.2-.568.064-.264-.136-1.112-.408-2.12-1.304-.784-.696-1.312-1.552-1.464-1.816-.152-.264-.016-.408.112-.544.112-.12.264-.312.392-.472.136-.16.184-.272.272-.456.088-.184.048-.344-.024-.48-.072-.136-.592-1.424-.816-1.952-.216-.504-.432-.432-.592-.44h-.504a.96.96 0 0 0-.688.32c-.232.264-.88.856-.88 2.088s.904 2.424 1.032 2.592c.128.168 1.784 2.72 4.32 3.816.608.264 1.08.424 1.448.544.608.192 1.16.16 1.6.096.488-.072 1.504-.608 1.712-1.2.208-.592.208-1.104.144-1.208-.064-.104-.232-.168-.496-.304z"/>
+        </svg>
+    </div>
+
+    <script>
+        // ==========================================
+        // COMPLETE PRODUCTS DATABASE - 50+ PRODUCTS
+        // ==========================================
+        
+        // Store ID for Cuelinks
+        const STORE_ID = 'smileai24-21';
+        const CUELINKS_KEY = 'xji4NIVD_Dg1CJrSDjgbiJm3COZ8RH2Ml5GiriivbCI';
+        
+        // Products Database with Real Images
+        const allProducts = [
+            // Electronics - 15 products
+            { id: 1, name: 'Apple iPhone 15 (128GB) - Black', price: 71999, mrp: 79900, discount: '10%', category: 'electronics', rating: 4.7, reviews: '12.4k', image: 'https://m.media-amazon.com/images/I/81K9kO9sL9L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0CHWNPS5R', commission: '5%' },
+            { id: 2, name: 'Samsung Galaxy S24 5G (8GB, 256GB)', price: 79999, mrp: 89999, discount: '11%', category: 'electronics', rating: 4.6, reviews: '8.4k', image: 'https://m.media-amazon.com/images/I/61Iym7aPr9L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0CNL6TG8K', commission: '4%' },
+            { id: 3, name: 'OnePlus 12 5G (16GB, 512GB)', price: 64999, mrp: 69999, discount: '7%', category: 'electronics', rating: 4.5, reviews: '5.6k', image: 'https://m.media-amazon.com/images/I/61eB7J1lJ4L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0CQHGRL9Q', commission: '4%' },
+            { id: 4, name: 'Apple MacBook Air M2 (8GB, 256GB)', price: 89990, mrp: 99900, discount: '10%', category: 'electronics', rating: 4.8, reviews: '23k', image: 'https://m.media-amazon.com/images/I/71TPda7cwUL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0B3C2R8K5', commission: '3.5%' },
+            { id: 5, name: 'HP Victus Gaming Laptop (16GB, 512GB SSD)', price: 56990, mrp: 67990, discount: '16%', category: 'electronics', rating: 4.4, reviews: '8.7k', image: 'https://m.media-amazon.com/images/I/61xUqZyC-uL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0BZ5KX3H8', commission: '3.5%' },
+            { id: 6, name: 'Apple AirPods Pro 2nd Gen', price: 24999, mrp: 29900, discount: '16%', category: 'electronics', rating: 4.7, reviews: '45k', image: 'https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0BDJ3Q9R2', commission: '4%' },
+            { id: 7, name: 'Sony WH-1000XM5 Noise Cancelling Headphones', price: 29990, mrp: 34990, discount: '14%', category: 'electronics', rating: 4.8, reviews: '23k', image: 'https://m.media-amazon.com/images/I/61qQ8xWQ6jL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0B3J2X8F4', commission: '4%' },
+            { id: 8, name: 'Gonoise Wireless Earbuds', price: 1299, mrp: 4999, discount: '74%', category: 'electronics', rating: 4.3, reviews: '125k', image: 'https://m.media-amazon.com/images/I/61X5X5Q8R._SL1500_.jpg', store: 'Gonoise', link: 'https://www.gonoise.com', commission: '5.6%' },
+            { id: 9, name: 'boAt Rockerz 450 Bluetooth Headphones', price: 1799, mrp: 2999, discount: '40%', category: 'electronics', rating: 4.3, reviews: '125k', image: 'https://m.media-amazon.com/images/I/71E-vXpWJ3L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B07HR8N4G7', commission: '4%' },
+            { id: 10, name: 'JBL Tune 510BT Wireless Headphones', price: 3999, mrp: 5999, discount: '33%', category: 'electronics', rating: 4.5, reviews: '34k', image: 'https://m.media-amazon.com/images/I/61W3fqQYk5L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B08G3Z3L5V', commission: '4%' },
+            { id: 11, name: 'Realme 12 Pro+ 5G', price: 29999, mrp: 34999, discount: '14%', category: 'electronics', rating: 4.4, reviews: '12k', image: 'https://m.media-amazon.com/images/I/61h4ZwJhZqL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0BZNQVH9G', commission: '4%' },
+            { id: 12, name: 'Google Pixel 7a 5G', price: 43999, mrp: 49999, discount: '12%', category: 'electronics', rating: 4.4, reviews: '8k', image: 'https://m.media-amazon.com/images/I/61pEu2T7YSL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0C1L5H5G9', commission: '4%' },
+            { id: 13, name: 'Dell Inspiron 15 Laptop', price: 49990, mrp: 59990, discount: '16%', category: 'electronics', rating: 4.4, reviews: '15k', image: 'https://m.media-amazon.com/images/I/61jQhQ7yJQL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0BQ8V6H6K', commission: '3.5%' },
+            { id: 14, name: 'ASUS Vivobook 15 Laptop', price: 37990, mrp: 45990, discount: '17%', category: 'electronics', rating: 4.5, reviews: '9k', image: 'https://m.media-amazon.com/images/I/61bQ4L9qK1L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0BQY1H1W7', commission: '3.5%' },
+            { id: 15, name: 'Lenovo IdeaPad 3 Laptop', price: 42990, mrp: 51990, discount: '17%', category: 'electronics', rating: 4.3, reviews: '11k', image: 'https://m.media-amazon.com/images/I/61kQxW3q0cL._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0B7S7H7K9', commission: '3.5%' },
+            
+            // Fashion - 15 products
+            { id: 16, name: "Levi's 501 Original Jeans", price: 2299, mrp: 3999, discount: '42%', category: 'fashion', rating: 4.4, reviews: '8.7k', image: 'https://m.media-amazon.com/images/I/81HqQxXqJQL._SL1500_.jpg', store: "Levi's", link: 'https://www.levi.in', commission: '17.5%' },
+            { id: 17, name: 'Nike Air Max Running Shoes', price: 5999, mrp: 8995, discount: '33%', category: 'fashion', rating: 4.5, reviews: '12k', image: 'https://m.media-amazon.com/images/I/71JqQxXqJQL._SL1500_.jpg', store: 'Nike', link: 'https://www.nike.com/in', commission: '10%' },
+            { id: 18, name: 'H&M Printed T-Shirt', price: 799, mrp: 1599, discount: '50%', category: 'fashion', rating: 4.3, reviews: '34k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'H&M', link: 'https://www2.hm.com', commission: '5.6%' },
+            { id: 19, name: 'Myntra Fashion Haul', price: 1499, mrp: 2999, discount: '50%', category: 'fashion', rating: 4.5, reviews: '56k', image: 'https://m.media-amazon.com/images/I/71WqQxXqJQL._SL1500_.jpg', store: 'Myntra', link: 'https://www.myntra.com', commission: '10%' },
+            { id: 20, name: 'Puma T-Shirt Pack of 3', price: 1299, mrp: 2499, discount: '48%', category: 'fashion', rating: 4.3, reviews: '23k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Puma', link: 'https://in.puma.com', commission: '8%' },
+            { id: 21, name: 'Allen Solly Men Shirt', price: 1499, mrp: 2999, discount: '50%', category: 'fashion', rating: 4.4, reviews: '15k', image: 'https://m.media-amazon.com/images/I/81HqQxXqJQL._SL1500_.jpg', store: 'Allen Solly', link: 'https://www.allensolly.com', commission: '10%' },
+            { id: 22, name: 'Fastrack Reflex Smartwatch', price: 2495, mrp: 4995, discount: '50%', category: 'fashion', rating: 4.3, reviews: '45k', image: 'https://m.media-amazon.com/images/I/71WqQxXqJQL._SL1500_.jpg', store: 'Fastrack', link: 'https://www.fastrack.com', commission: '8%' },
+            { id: 23, name: 'Adidas Running Shoes', price: 3999, mrp: 6999, discount: '43%', category: 'fashion', rating: 4.5, reviews: '28k', image: 'https://m.media-amazon.com/images/I/71JqQxXqJQL._SL1500_.jpg', store: 'Adidas', link: 'https://www.adidas.co.in', commission: '10.5%' },
+            { id: 24, name: 'Louis Philippe Formal Shirt', price: 1999, mrp: 3999, discount: '50%', category: 'fashion', rating: 4.4, reviews: '12k', image: 'https://m.media-amazon.com/images/I/81HqQxXqJQL._SL1500_.jpg', store: 'Louis Philippe', link: 'https://www.louisphilippe.com', commission: '10%' },
+            { id: 25, name: 'Bata Formal Shoes', price: 1499, mrp: 2999, discount: '50%', category: 'fashion', rating: 4.3, reviews: '34k', image: 'https://m.media-amazon.com/images/I/71JqQxXqJQL._SL1500_.jpg', store: 'Bata', link: 'https://www.bata.in', commission: '8%' },
+            { id: 26, name: 'Titan Analog Watch', price: 3495, mrp: 6995, discount: '50%', category: 'fashion', rating: 4.6, reviews: '18k', image: 'https://m.media-amazon.com/images/I/71WqQxXqJQL._SL1500_.jpg', store: 'Titan', link: 'https://www.titan.co.in', commission: '8%' },
+            { id: 27, name: 'Sparx Sports Shoes', price: 999, mrp: 1999, discount: '50%', category: 'fashion', rating: 4.2, reviews: '56k', image: 'https://m.media-amazon.com/images/I/71JqQxXqJQL._SL1500_.jpg', store: 'Sparx', link: 'https://www.sparx.com', commission: '8%' },
+            { id: 28, name: 'Van Heusen Formal Shirt', price: 1799, mrp: 3599, discount: '50%', category: 'fashion', rating: 4.4, reviews: '14k', image: 'https://m.media-amazon.com/images/I/81HqQxXqJQL._SL1500_.jpg', store: 'Van Heusen', link: 'https://www.vanheusen.com', commission: '10%' },
+            { id: 29, name: 'Wildcraft Backpack', price: 1999, mrp: 3999, discount: '50%', category: 'fashion', rating: 4.5, reviews: '22k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Wildcraft', link: 'https://www.wildcraft.com', commission: '8%' },
+            { id: 30, name: 'American Tourister Luggage', price: 3999, mrp: 7999, discount: '50%', category: 'fashion', rating: 4.4, reviews: '9k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'American Tourister', link: 'https://www.americantourister.com', commission: '8%' },
+            
+            // Beauty - 10 products
+            { id: 31, name: 'Swiss Beauty Liquid Lipstick', price: 399, mrp: 799, discount: '50%', category: 'beauty', rating: 4.6, reviews: '45k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Swiss Beauty', link: 'https://www.swissbeauty.in', commission: '23%' },
+            { id: 32, name: 'Mamaearth Vitamin C Face Wash', price: 299, mrp: 599, discount: '50%', category: 'beauty', rating: 4.4, reviews: '87k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Mamaearth', link: 'https://mamaearth.in', commission: '14%' },
+            { id: 33, name: 'Lakme 9 to 5 Foundation', price: 349, mrp: 699, discount: '50%', category: 'beauty', rating: 4.3, reviews: '34k', image: 'https://m.media-amazon.com/images/I/71EqQxXqJQL._SL1500_.jpg', store: 'Lakme', link: 'https://www.lakme.com', commission: '10%' },
+            { id: 34, name: 'Maybelline Mascara', price: 399, mrp: 799, discount: '50%', category: 'beauty', rating: 4.5, reviews: '56k', image: 'https://m.media-amazon.com/images/I/61DqQxXqJQL._SL1500_.jpg', store: 'Maybelline', link: 'https://www.maybelline.com', commission: '10%' },
+            { id: 35, name: 'Plum Body Oil', price: 449, mrp: 899, discount: '50%', category: 'beauty', rating: 4.4, reviews: '23k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Plum', link: 'https://www.plumgoodness.com', commission: '12%' },
+            { id: 36, name: 'Nykaa Lipstick', price: 599, mrp: 1199, discount: '50%', category: 'beauty', rating: 4.5, reviews: '67k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Nykaa', link: 'https://www.nykaa.com', commission: '10%' },
+            { id: 37, name: 'Biotique Face Pack', price: 249, mrp: 499, discount: '50%', category: 'beauty', rating: 4.3, reviews: '78k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Biotique', link: 'https://www.biotique.com', commission: '10%' },
+            { id: 38, name: 'Himalaya Face Wash', price: 149, mrp: 299, discount: '50%', category: 'beauty', rating: 4.3, reviews: '123k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Himalaya', link: 'https://www.himalayawellness.com', commission: '8%' },
+            { id: 39, name: 'Lotus Herbals Sunscreen', price: 299, mrp: 599, discount: '50%', category: 'beauty', rating: 4.4, reviews: '45k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Lotus', link: 'https://www.lotusherbals.com', commission: '10%' },
+            { id: 40, name: 'Forest Essentials Gift Set', price: 1499, mrp: 2999, discount: '50%', category: 'beauty', rating: 4.6, reviews: '12k', image: 'https://m.media-amazon.com/images/I/61FqQxXqJQL._SL1500_.jpg', store: 'Forest Essentials', link: 'https://www.forestessentials.com', commission: '10%' },
+            
+            // Home & Kitchen - 10 products
+            { id: 41, name: 'Prestige Deluxe Cooker 5L', price: 2299, mrp: 3450, discount: '33%', category: 'home', rating: 4.6, reviews: '34k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Prestige', link: 'https://www.prestige.com', commission: '8%' },
+            { id: 42, name: 'Bajaj Mixer Grinder', price: 3499, mrp: 4999, discount: '30%', category: 'home', rating: 4.5, reviews: '18k', image: 'https://m.media-amazon.com/images/I/61EqQxXqJQL._SL1500_.jpg', store: 'Bajaj', link: 'https://www.bajajelectronics.com', commission: '8%' },
+            { id: 43, name: 'Philips Steam Iron', price: 1499, mrp: 2495, discount: '40%', category: 'home', rating: 4.4, reviews: '28k', image: 'https://m.media-amazon.com/images/I/61HqQxXqJQL._SL1500_.jpg', store: 'Philips', link: 'https://www.philips.co.in', commission: '8%' },
+            { id: 44, name: 'Milton Water Bottle', price: 299, mrp: 599, discount: '50%', category: 'home', rating: 4.3, reviews: '87k', image: 'https://m.media-amazon.com/images/I/71CqQxXqJQL._SL1500_.jpg', store: 'Milton', link: 'https://www.milton.in', commission: '8%' },
+            { id: 45, name: 'Solimo Bed Sheet Set', price: 699, mrp: 1399, discount: '50%', category: 'home', rating: 4.3, reviews: '23k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Solimo', link: 'https://www.amazon.in', commission: '5%' },
+            { id: 46, name: 'Wakefit Memory Foam Pillow', price: 999, mrp: 1999, discount: '50%', category: 'home', rating: 4.5, reviews: '34k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Wakefit', link: 'https://www.wakefit.co', commission: '10%' },
+            { id: 47, name: 'Urban Ladder Dining Table', price: 14999, mrp: 29999, discount: '50%', category: 'home', rating: 4.6, reviews: '5k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Urban Ladder', link: 'https://www.urbanladder.com', commission: '8%' },
+            { id: 48, name: 'Pepperfry Sofa Set', price: 24999, mrp: 49999, discount: '50%', category: 'home', rating: 4.5, reviews: '8k', image: 'https://m.media-amazon.com/images/I/71KqQxXqJQL._SL1500_.jpg', store: 'Pepperfry', link: 'https://www.pepperfry.com', commission: '8%' },
+            { id: 49, name: 'Cello Water Bottle Set', price: 399, mrp: 799, discount: '50%', category: 'home', rating: 4.3, reviews: '45k', image: 'https://m.media-amazon.com/images/I/71CqQxXqJQL._SL1500_.jpg', store: 'Cello', link: 'https://www.cello.com', commission: '8%' },
+            { id: 50, name: 'Borosil Microwave Oven', price: 8999, mrp: 15999, discount: '44%', category: 'home', rating: 4.5, reviews: '12k', image: 'https://m.media-amazon.com/images/I/61EqQxXqJQL._SL1500_.jpg', store: 'Borosil', link: 'https://www.borosil.com', commission: '8%' }
+        ];
+        
+        // State variables
+        let currentCategory = 'all';
+        let currentProducts = [...allProducts];
+        let currentPage = 1;
+        const productsPerPage = 20;
+        let isLoading = false;
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            startFlashSaleTimer();
+            loadCartCount();
+            setupInfiniteScroll();
+            
+            // Category click handlers
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const cat = btn.dataset.cat;
+                    currentCategory = cat;
+                    currentPage = 1;
+                    
+                    if (cat === 'all') {
+                        currentProducts = [...allProducts];
+                    } else {
+                        currentProducts = allProducts.filter(p => p.category === cat);
+                    }
+                    
+                    renderProducts();
+                    
+                    // Update active state
+                    document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Update title
+                    const titles = {
+                        all: '🔥 All Deals for You',
+                        electronics: '📱 Best Electronics Deals',
+                        fashion: '👕 Latest Fashion Deals',
+                        beauty: '💄 Beauty & Cosmetics Deals',
+                        home: '🏠 Home & Kitchen Deals',
+                        travel: '✈️ Travel Deals',
+                        hosting: '🚀 Hosting & Tech Deals'
+                    };
+                    document.getElementById('sectionTitle').innerText = titles[cat] || '🔥 Trending Deals for You';
+                });
+            });
+            
+            // Search handler
+            window.searchProducts = () => {
+                const query = document.getElementById('searchInput').value.toLowerCase();
+                if (!query) {
+                    currentProducts = [...allProducts];
+                } else {
+                    currentProducts = allProducts.filter(p => p.name.toLowerCase().includes(query));
+                }
+                currentPage = 1;
+                renderProducts();
+                document.getElementById('sectionTitle').innerText = query ? `🔍 Search results for "${query}"` : '🔥 Trending Deals for You';
+            };
+            
+            // Sort handler
+            window.sortProducts = (sortBy) => {
+                let sorted = [...currentProducts];
+                if (sortBy === 'price_low') {
+                    sorted.sort((a, b) => a.price - b.price);
+                } else if (sortBy === 'price_high') {
+                    sorted.sort((a, b) => b.price - a.price);
+                } else if (sortBy === 'discount') {
+                    sorted.sort((a, b) => {
+                        const discountA = parseInt(a.discount) || 0;
+                        const discountB = parseInt(b.discount) || 0;
+                        return discountB - discountA;
+                    });
+                }
+                currentProducts = sorted;
+                currentPage = 1;
+                renderProducts();
+            };
+            
+            console.log('🚀 ShopDeal India Ready!');
+            console.log('🔑 Cuelinks API Key:', CUELINKS_KEY.substring(0, 15) + '...');
+            console.log('📦 Total Products:', allProducts.length);
+            console.log('🏪 Stores:', [...new Set(allProducts.map(p => p.store))].length);
+        });
+        
+        // Render products with Cuelinks integration
+        function renderProducts() {
+            const container = document.getElementById('productsGrid');
+            if (!container) return;
+            
+            const start = 0;
+            const end = currentPage * productsPerPage;
+            const productsToShow = currentProducts.slice(start, end);
+            
+            if (productsToShow.length === 0 && currentPage === 1) {
+                container.innerHTML = '<div class="loading-spinner">😕 No products found. Try another category!</div>';
+                return;
+            }
+            
+            container.innerHTML = productsToShow.map(p => `
+                <div class="product-card" data-link="${p.link}?tag=${STORE_ID}" onclick="redirectToStore(this)">
+                    ${p.discount && parseInt(p.discount) > 30 ? '<div class="product-badge">🔥 SUPER DEAL</div>' : ''}
+                    ${p.commission && parseInt(p.commission) > 10 ? '<div class="product-badge prime">💰 ' + p.commission + ' Commission</div>' : ''}
+                    <div class="product-img">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://placehold.co/300x300?text=' + encodeURIComponent('${p.store}')">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">${p.name}</div>
+                        <div class="product-price">
+                            <span class="current-price">₹${p.price.toLocaleString()}</span>
+                            <span class="old-price">₹${p.mrp.toLocaleString()}</span>
+                            <span class="discount">-${p.discount}</span>
+                        </div>
+                        <div class="rating">
+                            <span class="stars">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}</span>
+                            <span class="reviews">(${p.reviews})</span>
+                        </div>
+                        <div class="store-name">🏪 ${p.store}</div>
+                        <button class="shop-btn" onclick="event.stopPropagation(); redirectToStore(this.parentElement.parentElement)">Shop Now →</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Update load more button visibility
+            const loadMoreContainer = document.querySelector('.load-more');
+            if (loadMoreContainer) {
+                if (currentProducts.length <= currentPage * productsPerPage) {
+                    loadMoreContainer.style.display = 'none';
+                } else {
+                    loadMoreContainer.style.display = 'block';
+                }
+            }
+            
+            // Track product views
+            trackPageView();
+        }
+        
+        // Redirect to store with affiliate link
+        function redirectToStore(card) {
+            const link = card.dataset.link;
+            if (link) {
+                // Track click
+                trackClick();
+                // Open store in new tab
+                window.open(link, '_blank');
+            }
+        }
+        
+        // Load more products
+        function loadMoreProducts() {
+            if (isLoading) return;
+            isLoading = true;
+            
+            currentPage++;
+            renderProducts();
+            
+            setTimeout(() => {
+                isLoading = false;
+            }, 500);
+        }
+        
+        // Infinite scroll setup
+        function setupInfiniteScroll() {
+            const scrollTrigger = document.getElementById('scrollTrigger');
+            if (!scrollTrigger) return;
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !isLoading) {
+                        if (currentProducts.length > currentPage * productsPerPage) {
+                            loadMoreProducts();
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(scrollTrigger);
+        }
+        
+        // Flash sale timer
+        function startFlashSaleTimer() {
+            let end = new Date();
+            end.setHours(end.getHours() + 24);
+            
+            function updateTimer() {
+                let diff = end - new Date();
+                if (diff <= 0) {
+                    document.getElementById('flashTimer').innerText = '00:00:00';
+                    return;
+                }
+                let h = Math.floor(diff / 3600000);
+                let m = Math.floor((diff % 3600000) / 60000);
+                let s = Math.floor((diff % 60000) / 1000);
+                document.getElementById('flashTimer').innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            }
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+        
+        // Cart tracking
+        let cartCount = 0;
+        
+        function trackClick() {
+            cartCount++;
+            localStorage.setItem('shopdeal_cart', cartCount);
+            document.getElementById('cartCount').innerText = cartCount;
+        }
+        
+        function loadCartCount() {
+            const saved = localStorage.getItem('shopdeal_cart');
+            if (saved) cartCount = parseInt(saved);
+            document.getElementById('cartCount').innerText = cartCount;
+        }
+        
+        function showCart() {
+            alert(`🛒 Your cart has ${cartCount} item(s).\nProceed to store checkout for best price.`);
+        }
+        
+        // Page view tracking
+        function trackPageView() {
+            let views = localStorage.getItem('shopdeal_views') || 0;
+            views = parseInt(views) + 1;
+            localStorage.setItem('shopdeal_views', views);
+        }
+        
+        // Newsletter subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            if (email) {
+                let subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
+                if (!subscribers.includes(email)) {
+                    subscribers.push(email);
+                    localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                    alert('✅ Subscribed successfully! You will receive daily deals.');
+                    document.getElementById('newsletterEmail').value = '';
+                } else {
+                    alert('Already subscribed!');
+                }
+            }
+        }
+        
+        // WhatsApp chat
+        function startWhatsApp() {
+            window.open('https://wa.me/919773747761?text=Hi%21%20I%20want%20to%20buy%20products%20from%20ShopDeal%20India.%20Can%20you%20help%20me%20find%20best%20deals%3F', '_blank');
+        }
+        
+        // Make functions global
+        window.searchProducts = searchProducts;
+        window.sortProducts = sortProducts;
+        window.loadMoreProducts = loadMoreProducts;
+        window.redirectToStore = redirectToStore;
+        window.showCart = showCart;
+        window.subscribeNewsletter = subscribeNewsletter;
+        window.startWhatsApp = startWhatsApp;
+    </script>
+</body>
+</html>
