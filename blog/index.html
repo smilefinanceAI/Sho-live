@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Blog - Best Deals, Reviews & Buying Guides | ShopDeal</title>
+    <meta name="description" content="Read latest shopping guides, product reviews, and deal alerts. Find best products and save money.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .blog-header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 20px; text-align: center; }
+        .blog-header h1 { font-size: 42px; margin-bottom: 10px; }
+        .blog-grid { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
+        .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .blog-card:hover { transform: translateY(-4px); }
+        .blog-img { height: 200px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; font-size: 50px; }
+        .blog-content { padding: 20px; }
+        .blog-category { color: #ff6b35; font-size: 12px; text-transform: uppercase; margin-bottom: 8px; }
+        .blog-title { font-size: 20px; margin-bottom: 10px; }
+        .blog-excerpt { color: #666; font-size: 14px; margin-bottom: 15px; line-height: 1.5; }
+        .read-more { color: #ff6b35; text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr; } .blog-header h1 { font-size: 32px; } }
+    </style>
+</head>
+<body>
+    <header class="header"><div class="nav"><a href="/" class="logo">📝 ShopDeal Blog</a><div class="search-bar"><input type="text" id="searchInput" placeholder="Search articles..."><button onclick="searchProducts()">🔍</button></div><div class="cart-icon" onclick="showCart()">🛒 <span class="cart-count" id="cartCount">0</span></div></div></header>
+    <div class="blog-header"><h1>Shopping Blog</h1><p>Product Reviews, Buying Guides & Best Deals</p></div>
+    <div class="blog-grid">
+        <div class="blog-card"><div class="blog-img">📱</div><div class="blog-content"><div class="blog-category">Product Review</div><h2 class="blog-title">iPhone 15 Review: Is It Worth Buying?</h2><p class="blog-excerpt">Complete review of Apple iPhone 15 - camera, battery, performance, and price comparison. Should you upgrade?</p><a href="iphone-15-review.html" class="read-more">Read More →</a></div></div>
+        <div class="blog-card"><div class="blog-img">💻</div><div class="blog-content"><div class="blog-category">Buying Guide</div><h2 class="blog-title">Best Laptops Under 50000 in India 2024</h2><p class="blog-excerpt">Top 10 laptops under ₹50,000 for students, programmers, and professionals. Compare HP, Dell, Lenovo, Acer.</p><a href="best-laptops-2024.html" class="read-more">Read More →</a></div></div>
+        <div class="blog-card"><div class="blog-img">🎧</div><div class="blog-content"><div class="blog-category">Best Deals</div><h2 class="blog-title">Best Wireless Headphones Under 2000</h2><p class="blog-excerpt">Top budget headphones from boAt, Noise, Boult, Mivi. Compare features, battery life, and sound quality.</p><a href="best-headphones.html" class="read-more">Read More →</a></div></div>
+        <div class="blog-card"><div class="blog-img">👕</div><div class="blog-content"><div class="blog-category">Fashion Guide</div><h2 class="blog-title">Festival Fashion: Best Ethnic Wear Deals</h2><p class="blog-excerpt">Save up to 60% on ethnic wear this festive season. Best deals on kurtas, sarees, and lehengas.</p><a href="festival-fashion.html" class="read-more">Read More →</a></div></div>
+        <div class="blog-card"><div class="blog-img">💄</div><div class="blog-content"><div class="blog-category">Beauty</div><h2 class="blog-title">Best Skincare Products for Glowing Skin</h2><p class="blog-excerpt">Top-rated face washes, serums, and moisturizers from Mamaearth, Plum, Minimalist. Real user reviews.</p><a href="skincare-guide.html" class="read-more">Read More →</a></div></div>
+        <div class="blog-card"><div class="blog-img">🎁</div><div class="blog-content"><div class="blog-category">Gift Guide</div><h2 class="blog-title">Diwali Gift Guide 2024: Best Gift Ideas</h2><p class="blog-excerpt">Find perfect gifts for family and friends this Diwali. Electronics, fashion, home decor, and more.</p><a href="diwali-gift-guide.html" class="read-more">Read More →</a></div></div>
+    </div>
+    <footer class="footer"><div class="footer-grid"><div class="footer-col"><h4>ShopDeal India</h4><p>India's best deal aggregator</p></div><div class="footer-col"><h4>Quick Links</h4><a href="/">Home</a><a href="/deals.html">Deals</a><a href="/blog/">Blog</a></div><div class="footer-col"><h4>Contact</h4><p>📞 9773747761</p></div></div><div class="copyright"><p>© 2024 ShopDeal India | Powered by Cuelinks</p></div></footer>
+    <div class="whatsapp-float" onclick="startWhatsApp()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.032 0C5.384 0 0 5.384 0 12.032c0 2.112.56 4.184 1.632 6.008L0 24l6.08-1.584A12.02 12.02 0 0 0 12.032 24C18.68 24 24 18.616 24 11.968S18.68 0 12.032 0zM17.96 14.52c-.264-.136-1.568-.768-1.808-.856-.24-.088-.416-.136-.592.136-.176.272-.68.856-.832 1.032-.152.176-.304.2-.568.064-.264-.136-1.112-.408-2.12-1.304-.784-.696-1.312-1.552-1.464-1.816-.152-.264-.016-.408.112-.544.112-.12.264-.312.392-.472.136-.16.184-.272.272-.456.088-.184.048-.344-.024-.48-.072-.136-.592-1.424-.816-1.952-.216-.504-.432-.432-.592-.44h-.504a.96.96 0 0 0-.688.32c-.232.264-.88.856-.88 2.088s.904 2.424 1.032 2.592c.128.168 1.784 2.72 4.32 3.816.608.264 1.08.424 1.448.544.608.192 1.16.16 1.6.096.488-.072 1.504-.608 1.712-1.2.208-.592.208-1.104.144-1.208-.064-.104-.232-.168-.496-.304z"/></svg></div>
+    <script>
+        let cart = localStorage.getItem('shop_cart') ? parseInt(localStorage.getItem('shop_cart')) : 0;
+        document.getElementById('cartCount').innerText = cart;
+        function showCart() { alert(`🛒 Cart: ${cart} items`); }
+        function startWhatsApp() { window.open('https://wa.me/919773747761', '_blank'); }
+        function searchProducts() { window.location.href = '/'; }
+    </script>
+</body>
+</html>
