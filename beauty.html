@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Beauty & Cosmetics Deals - Makeup, Skincare | ShopDeal</title>
+    <meta name="description" content="Shop best beauty deals on makeup, skincare, haircare. Save up to 50% on Swiss Beauty, Mamaearth, Lakme, Maybelline.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header { background: linear-gradient(135deg, #f5af19, #f12711); color: white; padding: 40px 20px; text-align: center; }
+        .page-header h1 { font-size: 32px; margin-bottom: 10px; }
+        .products-grid { max-width: 1200px; margin: 30px auto; padding: 0 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; }
+        .product-card:hover { transform: translateY(-4px); }
+        .product-img { height: 200px; display: flex; align-items: center; justify-content: center; padding: 20px; background: #f8f8f8; }
+        .product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .product-info { padding: 15px; }
+        .product-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .price { margin-bottom: 8px; }
+        .current-price { font-size: 20px; font-weight: bold; color: #ff6b35; }
+        .old-price { font-size: 13px; color: #999; text-decoration: line-through; margin-left: 8px; }
+        .discount { background: #e8f5e9; color: #4caf50; padding: 2px 6px; border-radius: 4px; font-size: 11px; margin-left: 8px; }
+        .shop-btn { width: 100%; padding: 10px; background: #ff6b35; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <header class="header"><div class="nav"><a href="/" class="logo">🛍️ ShopDeal India</a><div class="search-bar"><input type="text" id="searchInput" placeholder="Search..."><button onclick="searchProducts()">🔍</button></div><div class="cart-icon" onclick="showCart()">🛒 <span class="cart-count" id="cartCount">0</span></div></div></header>
+    <div class="page-header"><h1>💄 Best Beauty & Cosmetics Deals</h1><p>Save up to 50% on Makeup, Skincare & Haircare</p></div>
+    <div class="products-grid" id="productsGrid"></div>
+    <footer class="footer"><div class="footer-grid"><div class="footer-col"><h4>ShopDeal India</h4><p>India's best deal aggregator</p></div><div class="footer-col"><h4>Quick Links</h4><a href="/electronics.html">Electronics</a><a href="/fashion.html">Fashion</a><a href="/beauty.html">Beauty</a></div><div class="footer-col"><h4>Contact</h4><p>📞 9773747761</p></div></div><div class="copyright"><p>© 2024 ShopDeal India | Powered by Cuelinks</p></div></footer>
+    <div class="whatsapp-float" onclick="startWhatsApp()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.032 0C5.384 0 0 5.384 0 12.032c0 2.112.56 4.184 1.632 6.008L0 24l6.08-1.584A12.02 12.02 0 0 0 12.032 24C18.68 24 24 18.616 24 11.968S18.68 0 12.032 0zM17.96 14.52c-.264-.136-1.568-.768-1.808-.856-.24-.088-.416-.136-.592.136-.176.272-.68.856-.832 1.032-.152.176-.304.2-.568.064-.264-.136-1.112-.408-2.12-1.304-.784-.696-1.312-1.552-1.464-1.816-.152-.264-.016-.408.112-.544.112-.12.264-.312.392-.472.136-.16.184-.272.272-.456.088-.184.048-.344-.024-.48-.072-.136-.592-1.424-.816-1.952-.216-.504-.432-.432-.592-.44h-.504a.96.96 0 0 0-.688.32c-.232.264-.88.856-.88 2.088s.904 2.424 1.032 2.592c.128.168 1.784 2.72 4.32 3.816.608.264 1.08.424 1.448.544.608.192 1.16.16 1.6.096.488-.072 1.504-.608 1.712-1.2.208-.592.208-1.104.144-1.208-.064-.104-.232-.168-.496-.304z"/></svg></div>
+    <script>
+        const beautyProducts = [
+            { name: 'Swiss Beauty Lipstick', price: 399, mrp: 799, discount: '50%', img: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=300&h=300&fit=crop', link: 'https://www.swissbeauty.in' },
+            { name: 'Mamaearth Face Wash', price: 299, mrp: 599, discount: '50%', img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&h=300&fit=crop', link: 'https://mamaearth.in' },
+            { name: 'Lakme Foundation', price: 349, mrp: 699, discount: '50%', img: 'https://images.unsplash.com/photo-1631730360959-38f9d89b3a00?w=300&h=300&fit=crop', link: 'https://www.lakme.com' },
+            { name: 'Maybelline Mascara', price: 399, mrp: 799, discount: '50%', img: 'https://images.unsplash.com/photo-1631730360924-18f5d2e3e4f5?w=300&h=300&fit=crop', link: 'https://www.maybelline.com' },
+            { name: 'Plum Body Oil', price: 449, mrp: 899, discount: '50%', img: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=300&h=300&fit=crop', link: 'https://www.plumgoodness.com' },
+            { name: 'Himalaya Face Wash', price: 149, mrp: 299, discount: '50%', img: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&h=300&fit=crop', link: 'https://www.himalayawellness.com' }
+        ];
+        let cart = localStorage.getItem('shop_cart') ? parseInt(localStorage.getItem('shop_cart')) : 0;
+        document.getElementById('cartCount').innerText = cart;
+        function redirectToStore(link) { cart++; localStorage.setItem('shop_cart', cart); document.getElementById('cartCount').innerText = cart; window.open(link, '_blank'); }
+        function renderProducts() { document.getElementById('productsGrid').innerHTML = beautyProducts.map(p => `<
