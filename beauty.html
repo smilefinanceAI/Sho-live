@@ -42,4 +42,11 @@
         let cart = localStorage.getItem('shop_cart') ? parseInt(localStorage.getItem('shop_cart')) : 0;
         document.getElementById('cartCount').innerText = cart;
         function redirectToStore(link) { cart++; localStorage.setItem('shop_cart', cart); document.getElementById('cartCount').innerText = cart; window.open(link, '_blank'); }
-        function renderProducts() { document.getElementById('productsGrid').innerHTML = beautyProducts.map(p => `<
+        function renderProducts() { document.getElementById('productsGrid').innerHTML = beautyProducts.map(p => `<div class="product-card" onclick="redirectToStore('${p.link}')"><div class="product-img"><img src="${p.img}" alt="${p.name}"></div><div class="product-info"><div class="product-title">${p.name}</div><div class="price"><span class="current-price">₹${p.price.toLocaleString()}</span><span class="old-price">₹${p.mrp.toLocaleString()}</span><span class="discount">-${p.discount}</span></div><button class="shop-btn" onclick="event.stopPropagation(); redirectToStore('${p.link}')">Shop Now →</button></div></div>`).join(''); }
+        function showCart() { alert(`🛒 Cart: ${cart} items`); }
+        function startWhatsApp() { window.open('https://wa.me/919773747761', '_blank'); }
+        function searchProducts() { window.location.href = '/'; }
+        renderProducts();
+    </script>
+</body>
+</html>
