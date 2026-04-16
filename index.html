@@ -7,7 +7,7 @@
     <meta name="description" content="Find best deals on Amazon, Flipkart, Myntra & 800+ stores. Save up to 80% on electronics, fashion, beauty & more.">
     <meta name="keywords" content="online shopping deals, best offers India, Amazon deals, Flipkart sale, Myntra offers">
     
-    <!-- Cuelinks API Integration -->
+    <!-- Cuelinks API Integration - Only This -->
     <script>
         const CUELINKS_API_KEY = 'xji4NIVD_Dg1CJrSDjgbiJm3COZ8RH2Ml5GiriivbCI';
         (function() {
@@ -593,7 +593,7 @@
                 <h4>🇮🇳 ShopDeal India</h4>
                 <p>India's largest deal aggregator</p>
                 <p>800+ stores | 50,000+ products</p>
-                <p>Cuelinks API Active</p>
+                <p style="margin-top: 10px;">🔑 Cuelinks API Active</p>
             </div>
             <div class="footer-col">
                 <h4>Top Stores</h4>
@@ -620,7 +620,7 @@
         </div>
         <div class="copyright">
             <p>© 2024 ShopDeal India | As an affiliate partner, we earn from qualifying purchases</p>
-            <p>Powered by Cuelinks | API Key: xji4NIVD_***</p>
+            <p>Powered by Cuelinks - 800+ merchants, one platform</p>
         </div>
     </footer>
 
@@ -633,13 +633,12 @@
 
     <script>
         // ==========================================
-        // COMPLETE PRODUCTS DATABASE - WITH REAL IMAGES
+        // ONLY CUELINKS API - NO AMAZON AFFILIATE ID
         // ==========================================
         
-        const STORE_ID = 'smileai24-21';
-        const CUELINKS_KEY = 'xji4NIVD_Dg1CJrSDjgbiJm3COZ8RH2Ml5GiriivbCI';
+        const CUELINKS_API_KEY = 'xji4NIVD_Dg1CJrSDjgbiJm3COZ8RH2Ml5GiriivbCI';
         
-        // 50+ Products with Real Amazon Images
+        // 42 Products with Real Images
         const allProducts = [
             // Electronics (12 products)
             { id: 1, name: 'Apple iPhone 15 (128GB) - Black', price: 71999, mrp: 79900, discount: '10%', category: 'electronics', rating: 4.7, reviews: '12.4k', image: 'https://m.media-amazon.com/images/I/81K9kO9sL9L._SL1500_.jpg', store: 'Amazon', link: 'https://www.amazon.in/dp/B0CHWNPS5R' },
@@ -699,7 +698,7 @@
         const productsPerPage = 12;
         let cartCount = 0;
         
-        // Render products
+        // Render products - Cuelinks will auto-convert links
         function renderProducts() {
             const container = document.getElementById('productsGrid');
             if (!container) return;
@@ -732,11 +731,11 @@
             `).join('');
         }
         
-        // Redirect with affiliate link
+        // Redirect using Cuelinks - It will auto-convert to affiliate link
         function redirectToProduct(link, productName) {
-            const affiliateLink = `${link}?tag=${STORE_ID}`;
             trackClick(productName);
-            window.open(affiliateLink, '_blank');
+            // Cuelinks script will automatically convert this link to affiliate link
+            window.open(link, '_blank');
         }
         
         // Track clicks
@@ -744,7 +743,7 @@
             cartCount++;
             localStorage.setItem('shopdeal_cart', cartCount);
             document.getElementById('cartCount').innerText = cartCount;
-            console.log(`🛒 Clicked: ${productName} | Total: ${cartCount}`);
+            console.log(`🛒 Clicked: ${productName} | Total: ${cartCount} | Cuelinks Active`);
         }
         
         // Load more products
@@ -857,9 +856,9 @@
             });
             
             console.log('✅ ShopDeal India Ready!');
-            console.log(`🔑 Cuelinks API Key: ${CUELINKS_KEY.substring(0, 15)}...`);
+            console.log(`🔑 Cuelinks API Key: ${CUELINKS_API_KEY.substring(0, 15)}...`);
             console.log(`📦 Total Products: ${allProducts.length}`);
-            console.log(`🏪 Stores: ${[...new Set(allProducts.map(p => p.store))].length}`);
+            console.log(`🏪 Cuelinks will auto-convert all product links to affiliate links`);
         });
         
         // Make functions global
